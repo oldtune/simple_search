@@ -9,7 +9,7 @@ use crate::parser::SearchType;
 mod error;
 
 fn main() {
-    let path = "/home/fedora/Downloads/Books";
+    let path = "/home/fedora/Downloads/Book";
     // let arg = arguments::Args::parse();
     let arg = Args {
         searchtype: SearchType::Fuzzy,
@@ -17,6 +17,7 @@ fn main() {
         folder: path.to_owned(),
         casesensitive: true,
     };
+
     let finder = Finder {
         file_name: arg.name,
         file_path: arg.folder,
